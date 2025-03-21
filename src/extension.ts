@@ -157,10 +157,10 @@ function runFormatter(command: string, text: string): string {
 
 function setupGitPreCommitHook() {
   const workspacePath = vscode.workspace.rootPath;
-  if (!workspacePath) return;
+  if (!workspacePath) {return;};
 
   const gitHookPath = path.join(workspacePath, ".git", "hooks", "pre-commit");
-  if (fs.existsSync(gitHookPath)) return;
+  if (fs.existsSync(gitHookPath)) {return;};
 
   const hookScript = `#!/bin/sh
   echo "Running SyntaxilitY Code Formatter before commit..."

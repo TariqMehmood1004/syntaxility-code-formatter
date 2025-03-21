@@ -170,11 +170,15 @@ function runFormatter(command, text) {
 }
 function setupGitPreCommitHook() {
     const workspacePath = vscode.workspace.rootPath;
-    if (!workspacePath)
+    if (!workspacePath) {
         return;
+    }
+    ;
     const gitHookPath = path.join(workspacePath, ".git", "hooks", "pre-commit");
-    if (fs.existsSync(gitHookPath))
+    if (fs.existsSync(gitHookPath)) {
         return;
+    }
+    ;
     const hookScript = `#!/bin/sh
   echo "Running SyntaxilitY Code Formatter before commit..."
   npx syntaxility-code-formatter || echo "Formatting failed, skipping commit."

@@ -1,48 +1,95 @@
-# Welcome to your VS Code Extension
+# **SyntaxilitY Code Formatter - Quickstart Guide**  
 
-## What's in the folder
+Welcome to the **SyntaxilitY Code Formatter**! 🎉 This guide will help you get started with **installing, using, and developing** this extension.  
 
-* This folder contains all of the files necessary for your extension.
-* `package.json` - this is the manifest file in which you declare your extension and command.
-  * The sample plugin registers a command and defines its title and command name. With this information VS Code can show the command in the command palette. It doesn’t yet need to load the plugin.
-* `src/extension.ts` - this is the main file where you will provide the implementation of your command.
-  * The file exports one function, `activate`, which is called the very first time your extension is activated (in this case by executing the command). Inside the `activate` function we call `registerCommand`.
-  * We pass the function containing the implementation of the command as the second parameter to `registerCommand`.
+---
 
-## Setup
+## **🚀 Getting Started**  
 
-* install the recommended extensions (amodio.tsl-problem-matcher, ms-vscode.extension-test-runner, and dbaeumer.vscode-eslint)
+### **Installation**  
+1️⃣ Open **Visual Studio Code**.  
+2️⃣ Go to **Extensions Marketplace** (`Ctrl + Shift + X` / `Cmd + Shift + X`).  
+3️⃣ Search for **"SyntaxilitY Code Formatter"**.  
+4️⃣ Click **Install**.  
 
+---
 
-## Get up and running straight away
+## **🛠 Features**  
+- **Supports multiple languages**: JavaScript, TypeScript, Python, C++, Rust, Go, SQL, YAML, Markdown, HTML, CSS.  
+- **Auto-detects installed formatters** & falls back to **Prettier** if missing.  
+- **Right-click context menu for quick formatting**.  
+- **Auto-format on save (configurable in `settings.json`)**.  
+- **Custom keyboard shortcut**: `Ctrl + Alt + F`.  
+- **Git Pre-Commit Hook for auto-formatting before commits**.  
 
-* Press `F5` to open a new window with your extension loaded.
-* Run your command from the command palette by pressing (`Ctrl+Shift+P` or `Cmd+Shift+P` on Mac) and typing `Hello World`.
-* Set breakpoints in your code inside `src/extension.ts` to debug your extension.
-* Find output from your extension in the debug console.
+---
 
-## Make changes
+## **⚙️ Usage**  
 
-* You can relaunch the extension from the debug toolbar after changing code in `src/extension.ts`.
-* You can also reload (`Ctrl+R` or `Cmd+R` on Mac) the VS Code window with your extension to load your changes.
+### **1️⃣ Format Code Manually**  
+Use the **command palette** (`Ctrl + Shift + P` / `Cmd + Shift + P`) and search for:  
+🔹 **"SyntaxilitY: Format Document"**  
 
+### **2️⃣ Auto-Format on Save**  
+Enable auto-formatting via **VS Code settings** (`settings.json`):  
+```
+"syntaxilityCodeFormatter.autoFormatOnSave": true
+```
 
-## Explore the API
+### **3️⃣ Customize Formatters for Specific Languages**  
+```
+"syntaxilityCodeFormatter.formatters": {
+  "javascript": "prettier",
+  "typescript": "eslint",
+  "python": "black",
+  "cpp": "clang-format",
+  "sql": "sql-formatter",
+  "markdown": "markdown-it"
+}
+```
 
-* You can open the full set of our API when you open the file `node_modules/@types/vscode/index.d.ts`.
+### **4️⃣ Enable Git Pre-Commit Hook**  
+```
+"syntaxilityCodeFormatter.preCommitHook": true
+```
 
-## Run tests
+---
 
-* Install the [Extension Test Runner](https://marketplace.visualstudio.com/items?itemName=ms-vscode.extension-test-runner)
-* Run the "watch" task via the **Tasks: Run Task** command. Make sure this is running, or tests might not be discovered.
-* Open the Testing view from the activity bar and click the Run Test" button, or use the hotkey `Ctrl/Cmd + ; A`
-* See the output of the test result in the Test Results view.
-* Make changes to `src/test/extension.test.ts` or create new test files inside the `test` folder.
-  * The provided test runner will only consider files matching the name pattern `**.test.ts`.
-  * You can create folders inside the `test` folder to structure your tests any way you want.
+## **👨‍💻 Developer Guide**  
 
-## Go further
+### **🔹 Clone & Setup the Project**  
+```
+git clone https://github.com/TariqMehmood1004/syntaxility-code-formatter.git
+cd syntaxility-code-formatter
+npm install
+```
 
-* Reduce the extension size and improve the startup time by [bundling your extension](https://code.visualstudio.com/api/working-with-extensions/bundling-extension).
-* [Publish your extension](https://code.visualstudio.com/api/working-with-extensions/publishing-extension) on the VS Code extension marketplace.
-* Automate builds by setting up [Continuous Integration](https://code.visualstudio.com/api/working-with-extensions/continuous-integration).
+### **🔹 Run in Development Mode**  
+```sh
+npm run dev
+```
+> This will compile and launch a new VS Code window with the extension loaded.  
+
+### **🔹 Package the Extension (`vsce`)**  
+```
+npm run compile
+vsce package
+```
+> Ensure you have `vsce` installed globally:  
+```
+npm install -g @vscode/vsce
+```
+
+---
+
+## **🔗 Useful Links**  
+- **GitHub Repository**: [SyntaxilitY Code Formatter](https://github.com/TariqMehmood1004/syntaxility-code-formatter)  
+- **Marketplace Listing**: _(To be added after publishing)_  
+- **License**: [MIT](https://opensource.org/licenses/MIT)  
+
+---
+
+## **🙌 Contributing**  
+Feel free to **fork** the repository and **submit pull requests** to improve the extension.  
+
+🚀 **Happy Coding with SyntaxilitY Code Formatter!** 🎉  
