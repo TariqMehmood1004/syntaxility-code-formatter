@@ -2,7 +2,7 @@
   "name": "syntaxility-code-formatter",
   "displayName": "SyntaxilitY Code Formatter",
   "description": "SyntaxilitY Code Formatter is a simple yet powerful code formatting extension** for Visual Studio Code. It supports multiple languages and integrates seamlessly with Prettier, ESLint, Black, Clang-Format, Rustfmt, and more!",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "icon": "syntaxility-code-formatter.png",
   "engines": {
     "vscode": ">=1.50.0"
@@ -28,10 +28,20 @@
   "contributes": {
     "commands": [
       {
-        "command": "syntaxility-code-formatter.helloWorld",
-        "title": "Hello World"
+        "command": "syntaxilityCodeFormatter.formatDocument",
+        "title": "SyntaxilitY: Code Formatter",
+        "category": "SyntaxilitY"
       }
-    ]
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "syntaxilityCodeFormatter.formatDocument",
+          "when": "editorHasDocument",
+          "group": "navigation"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run package",

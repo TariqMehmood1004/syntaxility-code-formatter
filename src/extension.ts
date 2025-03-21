@@ -9,13 +9,9 @@ import * as os from "os";
 export function activate(context: vscode.ExtensionContext) {
   console.log("SyntaxilitY Code Formatter is now active!");
 
-  const config = vscode.workspace.getConfiguration("syntaxilityCodeFormatter");
-  const userFormatters = config.get<{ [key: string]: string }>("formatters", {});
-  const preCommitHookEnabled = config.get<boolean>("preCommitHook", true);
-
-  let formatCommand = vscode.commands.registerCommand(
-    "syntaxilityCodeFormatter.formatDocument",
-    async () => {
+const config = vscode.workspace.getConfiguration("syntaxilityCodeFormatter");const userFormatters = config.get<{ [key: string]: string }>("formatters", {});
+  const preCommitHookEnabled = config.get<boolean>("preCommitHook", true);let formatCommand = vscode.commands.registerCommand(
+    "syntaxilityCodeFormatter.formatDocument",async () => {
       const editor = vscode.window.activeTextEditor;
       if (!editor) {
         vscode.window.showErrorMessage("No active editor found!");
