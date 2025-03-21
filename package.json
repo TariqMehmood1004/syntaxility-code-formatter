@@ -1,0 +1,65 @@
+{
+  "name": "syntaxility-code-formatter",
+  "displayName": "SyntaxilitY Code Formatter",
+  "description": "A simple yet powerful code formatter for VS Code.",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": ">=1.50.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "syntaxility-code-formatter.helloWorld",
+        "title": "Hello World"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test",
+    "dev": "npm run compile-tests && npm run compile && npm run lint && npm run test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.98.0",
+    "@typescript-eslint/eslint-plugin": "^8.27.0",
+    "@typescript-eslint/parser": "^8.27.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "black": "^0.3.0",
+    "clang-format": "^1.8.0",
+    "eslint": "^9.22.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-prettier": "^5.2.3",
+    "gofmt": "^0.1.0",
+    "jiti": "^2.4.2",
+    "js-beautify": "^1.15.4",
+    "markdown-it": "^14.1.0",
+    "prettier": "^3.5.3",
+    "prettier-plugin-sql": "^0.18.1",
+    "rustfmt": "^0.1.0",
+    "sql-formatter": "^15.5.1",
+    "ts-loader": "^9.5.2",
+    "typescript": "^5.7.3",
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1",
+    "yaml": "^2.7.0"
+  },
+  "dependencies": {
+    "@prettier/plugin-python": "^0.0.0-development",
+    "@prettier/plugin-ruby": "^4.0.4"
+  }
+}
