@@ -6,6 +6,9 @@ node_modules/
 out/
 dist/
 
+out
+dist
+
 # Dependency lock files
 yarn.lock
 package-lock.json
