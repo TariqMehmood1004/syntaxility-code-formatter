@@ -1,20 +1,18 @@
 # **SyntaxilitY Code Formatter - Quickstart Guide**  
 
-Welcome to the **SyntaxilitY Code Formatter**! 🎉 This guide will help you get started with **installing, using, and developing** this extension.  
+Welcome to the **SyntaxilitY Code Formatter**! This guide will help you get started with **installing, using, and developing** this extension.  
 
 ---
-
-## **🚀 Getting Started**  
 
 ### **Installation**  
-1️⃣ Open **Visual Studio Code**.  
-2️⃣ Go to **Extensions Marketplace** (`Ctrl + Shift + X` / `Cmd + Shift + X`).  
-3️⃣ Search for **"SyntaxilitY Code Formatter"**.  
-4️⃣ Click **Install**.  
+- Open **Visual Studio Code**.  
+- Go to **Extensions Marketplace** (`Ctrl + Shift + X` / `Cmd + Shift + X`).  
+- Search for **"SyntaxilitY Code Formatter"**.  
+- Click **Install**.  
 
 ---
 
-## **🛠 Features**  
+## **Features**  
 - **Supports multiple languages**: JavaScript, TypeScript, Python, C++, Rust, Go, SQL, YAML, Markdown, HTML, CSS.  
 - **Auto-detects installed formatters** & falls back to **Prettier** if missing.  
 - **Right-click context menu for quick formatting**.  
@@ -24,19 +22,17 @@ Welcome to the **SyntaxilitY Code Formatter**! 🎉 This guide will help you get
 
 ---
 
-## **⚙️ Usage**  
+## **Usage**  
 
-### **1️⃣ Format Code Manually**  
+### **1. Format Code Manually**  
 Use the **command palette** (`Ctrl + Shift + P` / `Cmd + Shift + P`) and search for:  
-🔹 **"SyntaxilitY: Format Document"**  
+- **"SyntaxilitY: Code Formatter"**  
 
-### **2️⃣ Auto-Format on Save**  
+### **2. Auto-Format on Save**
 Enable auto-formatting via **VS Code settings** (`settings.json`):  
-```
-"syntaxilityCodeFormatter.autoFormatOnSave": true
-```
+```"syntaxilityCodeFormatter.autoFormatOnSave": true```
 
-### **3️⃣ Customize Formatters for Specific Languages**  
+### **2. Customize Formatters for Specific Languages**  
 ```
 "syntaxilityCodeFormatter.formatters": {
   "javascript": "prettier",
@@ -48,48 +44,41 @@ Enable auto-formatting via **VS Code settings** (`settings.json`):
 }
 ```
 
-### **4️⃣ Enable Git Pre-Commit Hook**  
-```
-"syntaxilityCodeFormatter.preCommitHook": true
-```
+### **3. Enable Git Pre-Commit Hook**  
+```"syntaxilityCodeFormatter.preCommitHook": true```
 
 ---
 
-## **👨‍💻 Developer Guide**  
+## **Developer Guide**  
 
-### **🔹 Clone & Setup the Project**  
+### **Clone & Setup the Project**  
 ```
 git clone https://github.com/TariqMehmood1004/syntaxility-code-formatter.git
 cd syntaxility-code-formatter
 npm install
 ```
 
-### **🔹 Run in Development Mode**  
-```sh
-npm run dev
-```
+### **Run in Development Mode**  
+```npm run dev```
 > This will compile and launch a new VS Code window with the extension loaded.  
 
-### **🔹 Package the Extension (`vsce`)**  
+### **Package the Extension (`vsce`)**  
 ```
 npm run compile
 vsce package
-```
-> Ensure you have `vsce` installed globally:  
-```
-npm install -g @vscode/vsce
-```
+```> Ensure you have `vsce` installed globally:```
+```npm install -g @vscode/vsce```
 
 ---
 
-## **🔗 Useful Links**  
+## **Useful Links**  
 - **GitHub Repository**: [SyntaxilitY Code Formatter](https://github.com/TariqMehmood1004/syntaxility-code-formatter)  
 - **Marketplace Listing**: _(To be added after publishing)_  
 - **License**: [MIT](https://opensource.org/licenses/MIT)  
 
 ---
 
-## **🙌 Contributing**  
+## **Contributing**  
 Feel free to **fork** the repository and **submit pull requests** to improve the extension.  
 
-🚀 **Happy Coding with SyntaxilitY Code Formatter!** 🎉  
+**Happy Coding with SyntaxilitY Code Formatter!**
