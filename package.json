@@ -1,12 +1,20 @@
 {
   "name": "syntaxility-code-formatter",
   "displayName": "SyntaxilitY Code Formatter",
-  "description": "A simple yet powerful code formatter for VS Code.",
-  "version": "1.0.0",
+  "description": "SyntaxilitY Code Formatter is a simple yet powerful code formatting extension** for Visual Studio Code. It supports multiple languages and integrates seamlessly with Prettier, ESLint, Black, Clang-Format, Rustfmt, and more!",
+  "version": "1.0.2",
   "icon": "syntaxility-code-formatter.png",
   "engines": {
     "vscode": ">=1.50.0"
   },
+  "publisher": "SyntaxilitY",
+  "author": "Tariq Mehmood",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/TariqMehmood1004/syntaxility-code-formatter",
+    "type": "git"
+  },
+  "homepage": "https://github.com/TariqMehmood1004/syntaxility-code-formatter",
   "categories": [
     "Code",
     "Data Science",
