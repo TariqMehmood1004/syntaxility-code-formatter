@@ -1,1 +1,20 @@
-node_modules
+# Node.js dependencies
+node_modules/
+
+# VS Code extension package files
+*.vsix
+out/
+dist/
+
+# Dependency lock files
+yarn.lock
+package-lock.json
+
+# Build artifacts
+*.log
+npm-debug.log*
+.vscode/
+.DS_Store
+
+# VS Code workspace settings
+.vscode/*
